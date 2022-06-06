@@ -1,7 +1,7 @@
-server.get ('/usuario/nome') , async (req ,resp => {
+server.get ('/usuario/consultar ') , async (req ,resp => {
     try {
-        let a = {usuario} = req.body;
-        let b = { resposta} = await nome (usuario);
+        let a = {nome} = req.body;
+        let b = { resposta} = await nome (nome);
    
     }
     catch (err){
@@ -9,4 +9,4 @@ server.get ('/usuario/nome') , async (req ,resp => {
             erro:err.mensagem
         })
     }
-})
+});

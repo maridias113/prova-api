@@ -9,4 +9,4 @@ server.use(cors());
 server.use(express.json());
 
 server.listen(process.env.PORT , () => 
-                        console.log(`API online na porta ${process.env.Port}`));
+                 console.log(`API online na porta ${process.env.PORT}`));

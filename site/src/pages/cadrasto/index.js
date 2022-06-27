@@ -10,13 +10,64 @@ import { async } from 'regenerator-runtime';
 export default function Cadrastar(){
     const [nome, sertNome] = useState('');
     const [peso , setName] = useState('0');
-    const [raça , setName]  = useState('');
+    const [raca , setName]  = useState('');
     const [idade , setName] = useState ('0');
     const [email , setName] = useState ('');
-
+    
+}
 
 
     const {idparams} = useParams
 
     useEffect(()  => {
-        if (id
+        if (idparams)
+          CarregarServiço();
+    }
+
+
+async function CadrastarServiço(){
+    const res = await BuscarId(idparams)
+    
+    setnome (res.Name);
+    setemail (res.email);
+    setraca (res.raca);
+    setpeso (res.peso);
+    setidade (res.idade);
+
+}
+
+
+async function ClickCadrastrar(){
+    try{
+        if(id ==3){
+            const NovoPet =await cadrastarServiços(nome , email , raca , peso , idade )
+
+            toast .sucess('petizinho cadrastado')
+        }
+
+        catch (err){
+            toast(err.response.data.erro)
+        }
+    }
+
+
+function NovoCadrasto (){
+    setnome ('');
+    setemail ('');
+    setraca ('');
+    setpeso ('');
+    setidade ('');
+}
+
+return (
+    <section >
+    <div className='cadrasto'>
+         <label><strong> nome : </strong></label>
+
+         
+    
+    </div>
+
+    </section>
+
+)

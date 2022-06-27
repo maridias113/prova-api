@@ -25,7 +25,7 @@ export default function Cadrastar(){
     }
 
 
-async function CadrastarServiço(){
+ async function CadrastarServiço(){
     const res = await BuscarId(idparams)
     
     setnome (res.Name);
@@ -37,37 +37,24 @@ async function CadrastarServiço(){
 }
 
 
-async function ClickCadrastrar(){
+async  function ClickCadrastrar(){
     try{
         if(id ==3){
             const NovoPet =await cadrastarServiços(nome , email , raca , peso , idade )
 
             toast .sucess('petizinho cadrastado')
-        }
 
-        catch (err){
+        } catch (err){
             toast(err.response.data.erro)
         }
     }
 
 
-function NovoCadrasto (){
+function Cadrasto (){
     setnome ('');
     setemail ('');
     setraca ('');
     setpeso ('');
     setidade ('');
-}
+})
 
-return (
-    <section >
-    <div className='cadrasto'>
-         <label><strong> nome : </strong></label>
-
-         
-    
-    </div>
-
-    </section>
-
-)

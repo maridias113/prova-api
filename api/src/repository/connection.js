@@ -1,6 +1,6 @@
 
-import mysql from 'mysql2/promise.js';
-import 'dotenv/config.js'
+import mysql from 'mysql2/promise.js'
+import 'dotenv/config.js';
 
 const con =mysql.createConnection({
     host: process.env.MYSQL_HOST,

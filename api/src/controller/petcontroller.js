@@ -12,10 +12,10 @@ server.post ('/pet/nome', async (req , resp ) => {
 
 
      }catch (err )    {
-         resp.status(404).send({
-             erro:err.message
-         })
-     } 
+        resp.status(404).send({
+        erro:err.message
+        })
+    } 
 })
 
 server.get('/pet', async (req, resp ) => {
@@ -25,7 +25,7 @@ server.get('/pet', async (req, resp ) => {
 
     }catch(err){
         resp.status(404).send({
-             erro:err.message
+            erro:err.message
         })
     }
 })

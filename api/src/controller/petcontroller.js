@@ -1,5 +1,5 @@
 import { Router }from "express";
-import { CadastrarPET , consultarPET} from '../repository/petrepository.js'
+import { cadrastarPET , consultarPET} from '../repository/petrepository.js'
 
 const server = Router();
 
@@ -7,7 +7,7 @@ server.post ('/pet/nome', async (req , resp ) => {
     try{
         const {nome } = req.query;
 
-        const resultado = await CadrastarPET(nome);
+        const resultado = await cadrastarPET(nome);
         resp.send(resultado)
 
 
